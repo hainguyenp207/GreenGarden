@@ -11,7 +11,10 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
+ * Lớp enity dùng để mapping tới Database thông qua Hibernate
+ * Các thuộc tính ứng với các cột trong bảng
  * Created by jinz on 12/12/16.
+ * Lớp mapping với bảng post
  */
 @Entity
 @Table(name = "post")
@@ -20,11 +23,12 @@ public class Post {
     private String id;
     private String name;
     private String description;
-    private String location;
     private String imageURL;
     private String create_by;
     private Date create_date;
     private Category category;
+    private int view;
+
 
 
     public Post(){
@@ -32,11 +36,10 @@ public class Post {
         this.create_date = new Date();
     };
 
-    public Post(String name, String description, String location, String imageURL) {
+    public Post(String name, String description, String imageURL) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.description = description;
-        this.location = location;
         this.imageURL = imageURL;
         // Auto generate date create
         this.create_date = new Date();
@@ -77,13 +80,6 @@ public class Post {
         this.description = description;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
 
     @Column(name = "image_url")
     public String getImageURL() {
@@ -108,5 +104,13 @@ public class Post {
 
     public void setCreate_date(Date create_date) {
         this.create_date = create_date;
+    }
+
+    public int getView() {
+        return view;
+    }
+
+    public void setView(int view) {
+        this.view = view;
     }
 }

@@ -8,7 +8,10 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
+ * Lớp enity dùng để mapping tới Database thông qua Hibernate
+ * Các thuộc tính ứng với các cột trong bảng
  * Created by jinz on 12/12/16.
+ * Lớp mapping với bảng category
  */
 @Entity
 @Table(name = "category")
@@ -18,6 +21,7 @@ public class Category {
     private String id;
     private String name;
     private String description;
+    // Chứa danh sách bài viết
     private Set<Post> posts;
 
 
@@ -69,8 +73,9 @@ public class Category {
         this.description = description;
     }
 
-    @OneToMany(mappedBy = "category", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @LazyToOne(LazyToOneOption.NO_PROXY)
+
     public Set<Post> getPosts() {
         return posts;
     }

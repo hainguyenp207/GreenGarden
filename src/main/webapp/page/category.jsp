@@ -31,7 +31,7 @@
                 <div class="right-wrapper pull-right">
                     <ol class="breadcrumbs">
                         <li>
-                            <a href="index.html">
+                            <a href="/">
                                 <i class="fa fa-home"></i>
                             </a>
                         </li>
@@ -186,8 +186,8 @@
                     data: 'id',
                     "render": function (data, type, full, meta) {
                         return '<button data="'+data+'"class="edit btn btn-default">' +
-                            '<i class="fa fa-pencil"></i>  Edit</button> ' +
-                            '<button data-toggle="modal" data-target="#delmodal" value="' + data + '" class="btn btn-danger del"><i class="fa fa-trash-o"></i>  Delete</button>';
+                            '<i class="fa fa-pencil"></i>  Chỉnh sửa</button> ' +
+                            '<button data-toggle="modal" data-target="#delmodal" value="' + data + '" class="btn btn-danger del"><i class="fa fa-trash-o"></i>  Xóa</button>';
                     }
                 }
 
@@ -252,10 +252,10 @@
             var data = table.row($(this).parents('tr')).data();
             $('#delID').val(data.id);
             $('#delID').removeAttr('disabled');
-            $('#addCategory').attr("disabled", true);
-            $('#addCategory').hide();
-            $('#editCategory').show();
-            $('#cancelCategory').show();
+            $('#addCategory').removeAttr("disabled", true);
+            $('#addCategory').show();
+            $('#editCategory').hide();
+            $('#cancelCategory').hide();
 
         });
         $("#addCategory").click(function (e) {

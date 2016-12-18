@@ -31,7 +31,7 @@
                 <div class="right-wrapper pull-right">
                     <ol class="breadcrumbs">
                         <li>
-                            <a href="index.html">
+                            <a href="/">
                                 <i class="fa fa-home"></i>
                             </a>
                         </li>
@@ -63,10 +63,17 @@
                                 </div>
                             </c:if>
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-2">
                                     <div class="mb-md">
-                                        <a href="/post/add" class="btn btn-primary">
+                                        <a href="/admin/post/add" class="btn btn-primary">
                                             Thêm bài viết
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="mb-md">
+                                        <a href="/admin/category" class="btn btn-primary">
+                                            Thêm chuyên mục
                                         </a>
                                     </div>
                                 </div>
@@ -80,6 +87,7 @@
                             <th>Tên hoạt động</th>
                             <th>Tác giả</th>
                             <th>Chuyên mục</th>
+                            <th>Hình đại diện</th>
                             <th>Ngày đăng</th>
                             <th>Hành động</th>
                             </tr>
@@ -131,18 +139,20 @@
 <%@include file="./footer.jsp" %>
 <script>
     $(document).ready(function () {
-        function post(index,id, name, create_by, category_name, create_date) {
+        function post(index,id, name, create_by, category_name,avatar, create_date) {
             this.index = index;
             this.id = id;
             this.name = name;
+
             this.create_by = create_by;
             this.category_name = category_name;
+            this.avatar = avatar;
             this.create_date = create_date;
         };
         var table = $('#postTable').DataTable({
             data: [
                 <c:forEach items="${posts}" var="item">
-                new post("${index}", "${item.id}", "${item.name}", "${item.create_by}","${item.category.name}",moment('${item.create_date}').format('DD-MM-YYYY hh:mm')),
+                new post("${index}", "${item.id}", "${item.name}", "${item.create_by}","${item.category.name}", "${item.imageURL}",moment('${item.create_date}').format('DD-MM-YYYY hh:mm')),
                 </c:forEach>
             ],
 
@@ -157,13 +167,19 @@
                 },
                 {data: 'create_by'},
                 {data: 'category_name'},
+                {data: 'avatar',
+                    "render": function (data, type, full, meta) {
+
+                        return '<img src="'+data+'" width="75" height="75"> ';
+                    }
+                },
                 {data: 'create_date'},
                 {
                     data: 'id',
                     "render": function (data, type, full, meta) {
-                        return '<a href="/user/' + data + '" class="btn btn-default">' +
-                            '<i class="fa fa-pencil"></i>  Edit</a> ' +
-                            '<a data-toggle="modal" data-target="#delmodal" value="' + data + '" class="btn btn-danger del"><i class="fa fa-trash-o"></i>  Delete</a>';
+                        return '<a href="/admin/edit/' + data + '" class="btn btn-default">' +
+                            '<i class="fa fa-pencil"></i>  Chỉnh sửa</a> ' +
+                            '<a data-toggle="modal" data-target="#delmodal" value="' + data + '" class="btn btn-danger del"><i class="fa fa-trash-o"></i>  Xóa</a>';
                     }
                 }
 

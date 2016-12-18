@@ -31,7 +31,7 @@
                 <div class="right-wrapper pull-right">
                     <ol class="breadcrumbs">
                         <li>
-                            <a href="index.html">
+                            <a href="/">
                                 <i class="fa fa-home"></i>
                             </a>
                         </li>
@@ -44,6 +44,7 @@
 
             <!-- start: page -->
             <div class="row">
+                <form action="/admin/post/add" method="post" enctype="multipart/form-data">
                 <div class="col-md-9">
                     <section class="panel">
                         <header class="panel-heading">
@@ -62,19 +63,13 @@
                                     <strong>Lỗi!</strong> ${message}.
                                 </div>
                             </c:if>
-                            <form action="/admin/post/add" method="post">
+
                             <div class="row">
                                 <div class="col-sm-12">
                                         <div class="form-group">
                                             <label class="col-md-1 control-label" for="name">Tên</label>
                                             <div class="col-md-9">
                                                 <input type="text" name="name" placeholder="Tên tiêu đề bài viết ở đây." class="form-control" id="name">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-1 control-label" for="name">Địa điểm</label>
-                                            <div class="col-md-9">
-                                                <input type="text" name="localtion" placeholder="Địa điểm diễn ra hoạt động" class="form-control" id="name"></input>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -104,15 +99,12 @@
                             <h2 class="panel-title">Chọn chuyên mục</h2>
                         </header>
                         <div class="panel-body">
-                            <select multiple="" name="category" class="form-control">
+                            <select multiple="" name="category_id" class="form-control">
                                 <c:forEach items="${categories}" var="category">
                                 <option value="${category.id}">${category.name}</option>
                                 </c:forEach>
                             </select>
                         </div>
-                        <footer class="panel-footer">
-                            <button id="addCategory" class="btn btn-primary">Thêm chuyên mục</button>
-                        </footer>
                     </section>
                     </div>
                     <div class="row">
@@ -121,7 +113,9 @@
                             <h2 class="panel-title">Chọn ảnh đại diện</h2>
                         </header>
                         <div class="panel-body">
-
+                            <input type="hidden" name="location" class="form-control" id="url" >
+                            <img id="img" src="${post.imageURL}" width="200" height="200">
+                            <input type="file" name="file" id="imgInp" class="btn btn-default"  value="Upload ảnh">
                         </div>
 
                     </section>
@@ -135,7 +129,31 @@
     </div>
 
     <ckeditor:replace replace="editor" basePath="../../ckeditor/" />
+
 </section>
 <%@include file="./footer.jsp"%>
+<script>
+    $(document).ready(function () {
+        $('#img').hide();
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img').attr('src', e.target.result);
+                    $('#img').show();
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+
+        $("#imgInp").change(function(){
+            readURL(this);
+        });
+    })
+
+</script>
 </body>
 </html>
