@@ -226,7 +226,7 @@ public class NguyenMinhHai_04_PostController {
             try {
                 String fileName = "";
                 String path = servletContext.getRealPath("/images/");
-                ;
+
                 if (file != null && !file.isEmpty() && file.getBytes().length>0) {
                     FileCopyUtils.copy(file.getBytes(), new File(path + file.getOriginalFilename()));
                     fileName = multipartFile.getOriginalFilename();
@@ -242,11 +242,15 @@ public class NguyenMinhHai_04_PostController {
                     message = "Không tìm thấy post";
 
                 } else {
+                    String imageCurrent = currentPost.getImageURL();
                     currentPost = post;
                     currentPost.setId(id);
                     currentPost.setCategory(category);
                     if(flag)
                         currentPost.setImageURL("/images/" + fileName);
+                    else{
+                        currentPost.setImageURL(imageCurrent);
+                    }
                     if (nguyenMinhHai04PostService.update(currentPost) != null) {
                         message = "Cập nhập hoạt động thành công";
                         status = "success";
