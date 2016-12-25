@@ -3,7 +3,7 @@
 
 <!-- Web Fonts  -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Vendor CSS -->
 <link rel="stylesheet" href="../../assets/vendor/bootstrap/css/bootstrap.css" />
 

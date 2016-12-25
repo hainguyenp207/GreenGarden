@@ -53,7 +53,7 @@ public class Post {
         this.id = id;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_category")
     public Category getCategory() {
         return category;

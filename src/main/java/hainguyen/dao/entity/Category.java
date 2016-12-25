@@ -74,7 +74,6 @@ public class Category {
     }
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @LazyToOne(LazyToOneOption.NO_PROXY)
 
     public Set<Post> getPosts() {
         return posts;

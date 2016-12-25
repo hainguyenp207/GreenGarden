@@ -4,362 +4,753 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
-<html lang="en"
-      class="fixed js flexbox flexboxlegacy no-touch csstransforms csstransforms3d no-overflowscrolling sidebar-light no-mobile-device custom-scroll sidebar-left-collapsed">
+<html class='v2 index' dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
+      xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-    <meta charset="utf-8"/>
-    <title>Green Garden</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="" name="description"/>
-    <meta content="" name="author"/>
-    <link rel="shortcut icon" href="favicon.ico"/>
-
-    <%@include file="./header.jsp" %>
-    <link rel="stylesheet" href="/assets/cubeportfolio/css/cubeportfolio.min.css">
-    <link rel='stylesheet' id='google_font_open_sans-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C400%2C600%2C700&#038;ver=4.5.4' type='text/css' media='all' />
-    <link rel='stylesheet' id='google_font_roboto-css'  href='http://fonts.googleapis.com/css?family=Roboto%3A500%2C400italic%2C700%2C900%2C500italic%2C400%2C300&#038;ver=4.5.4' type='text/css' media='all' />
-    <link rel='stylesheet' id='google-fonts-style-css'  href='http://fonts.googleapis.com/css?family=Poppins%3A400%2C700%7CDroid+Serif%3A400%2C700&#038;ver=4.5.4' type='text/css' media='all' />
-    <style>
-        /*nav{*/
-        /*height: 75px;*/
-        /*}*/
-        * {
-            box-sizing: border-box
+    <meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport'/>
+    <meta content='text/html;charset=UTF-8' http-equiv='Content-Type'/>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+    <meta content='blogger' name='generator'/>
+    <![endif]-->
+    <meta content='http://gridz-themexpose.blogspot.com/' property='og:url'/>
+    <meta content='Gridz Responsive Blogger Template' property='og:title'/>
+    <meta content='' property='og:description'/>
+    <!--[if IE]>
+    <script> (function () {
+        var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(',');
+        for (var i = 0; i < html5.length; i++) {
+            document.createElement(html5[i]);
         }
-
-        body {
-            font-family: Verdana, sans-serif;
+        try {
+            document.execCommand('BackgroundImageCache', false, true);
+        } catch (e) {
         }
+    })(); </script> <![endif]-->
+    <!-- SEO Meta Tag -->
+    <meta content='Gridz Responsive Blogger Template' name='keywords'/>
+    <!-- SEO Title Tag -->
+    <title>
+        Green Garden - Ươm mầm giấc mơ
+    </title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'/>
+    <link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link type='text/css' rel='stylesheet'
+          href='https://www.blogger.com/static/v1/widgets/178992763-css_bundle_v2.css'/>
+    <link type='text/css' rel='stylesheet'
+          href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=8716316713512045313&amp;zx=eb9f4983-611b-434e-8ce9-a6cf0a00fb40'/>
 
-        .mySlides {
-            display: none
-        }
 
-        /* Slideshow container */
-        .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
+    <link rel="stylesheet" href="/css/style_custom.css">
+    <!-- LOAD JQUERY -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js' type='text/javascript'></script>
 
-        /* Caption text */
-        .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-        }
-
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-
-        /* The dots/bullets/indicators */
-        .dot {
-            height: 13px;
-            width: 13px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active {
-            background-color: #717171;
-        }
-
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @-webkit-keyframes fade {
-            from {
-                opacity: .4
-            }
-            to {
-                opacity: 1
+    <script style='text/javascript'>
+        //<![CDATA[
+        function authorshow(data) {
+            for (var i = 0; i < 1; i++) {
+                var entry = data.feed.entry[i];
+                var avtr = entry.author[0].gd$image.src;
+                document.write('<img width="100" height="100" src="' + avtr + '"/>');
             }
         }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-            to {
-                opacity: 1
-            }
-        }
-
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-            .text {
-                font-size: 11px
-            }
-        }
-
-        body {
-            font-family: "Droid Serif";
-            font-size: 16px;
-            line-height: 24px;
-            background-image: url("/images/background.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .cbp-item {
-            height: 400px; /* your desire value */
-        }
-
-        .breadcrumb {
-            font-size: 16px;
-            text-transform: uppercase;
-
-        }
-
-        .breadcrumb a:hover {
-            cursor: auto;
-
-        }
-
-        .breadcrumb a {
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 400;
-            font-style: normal;
-            color: #333333;
-            font-size: 14px;
-
-        }
-
-        .uppercase {
-            text-transform: uppercase;
-        }
-
-        .top-header {
-            height: 30px;
-            color: #fff;
-            background-color: #222;
-            padding-left: 15px;
-        }
-
-        .wrap {
-            background: #fff;
-        }
-#weather, #datetime,#datetime1{
-    display: inline-block;
-    font-family: 'Open Sans', arial, sans-serif;
-    font-size: 11px;
-}
-        #datetime1{
-         text-decoration: none;
-            cursor: auto;
-
-        }
-        .item-menu{
-            list-style: none;
-            float: left;
-        }
-        .item-menu a{
-            padding: 0 14px;
-            line-height: 48px;
-            font-size: 14px;
-            color: #000;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .item-menu a:hover{
-            text-decoration: none;
-        }
-
-        li.item-menu a:after{
-
-            background-color: transparent;
-            content: "";
-            width: 100%;
-            height: 4px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-        }
-        li.item-menu:hover > a:after {
-            background-color: #35a533;
-        }
-        .menu-header{
-            -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
-            -moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.75);
-            box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.75);
-        }
-
-
-    </style>
+        //]]>
+    </script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> <![endif]-->
 </head>
-
 <body>
 
-<section class="body" >
-    <div class="container">
-        <div class="wrap">
-            <div class="wrap-header">
-        <div class="top-header">
-            <div id="weather">
-                Hanoi, Vietnam
-            </div>
-            <div id="datetime">
-                Thứ Bảy, Tháng Mười Hai 17, 2016
-
-            </div>
-            <c:if test="${pageContext.request.userPrincipal.authenticated}">
-                <div id="datetime1" class="pull-right" style="margin-right: 24px">
-                <a href="/logout">Đăng xuất</a>
-            </div>
-                <div id="datetime1" class="pull-right" style="margin-right: 24px">
-                    <a href="/admin/edit">Quản lý bài viết</a>
-                </div>
-            </c:if>
-            <c:if test="${!pageContext.request.userPrincipal.authenticated}">
-
-
-
-                <div id="datetime1" class="pull-right" style="margin-right: 24px">
-                <a href="/login">Đăng nhập</a>
-            </div>
-
-
-            </c:if>
-
-
-            
+<!-- PRELOADER -->
+<div id='preloader'>
+    <div class='tb-cell'>
+        <div class='page-loading'>
+            <div class='item-icon'></div>
         </div>
-<div class="menu-header" style="height: 52px">
-<ul>
-    <c:forEach items="${categories}" var="category">
-        <li class="item-menu"><a href="/post/category/${category.id}"> ${category.name}</a></li>
-        </c:forEach>
-</ul>
-    <form class="navbar-form navbar-right" action="/" method="post" style="margin-right: 20px">
-    <div class="form-group">
-    <input type="text" name="keyword" class="form-control" placeholder="Tìm bài viết">
     </div>
-    <button type="submit" class="btn btn-default">Go</button>
-    </form>
 </div>
-   <div class="logo" style="text-align: center; padding: 20px">
-       <a href="/">
-       <img style="width: 65%; height: 300px; margin: 0 auto" src="http://blog.saokim.com.vn/wp-content/uploads/2012/06/thiet-thuong-hieu-thoi-trang-tre-em.jpg" alt="">
-       </a>
-   </div>
-
+<!-- END / PRELOADER -->
+<!-- PAGE WRAP -->
+<div id='page-wrap'>
+    <!-- NAVIGATION -->
+    <div class='pi-navigation1'>
+        <div class='container'>
+            <div class='topnav section' id='topnav'>
+                <div class='widget PageList' data-version='1' id='PageList1'>
+                    <h2>Pages</h2>
+                    <div class='widget-content navlist'>
+                        <ul>
+                            <li class='selected'><a href='/'>Home</a></li>
+                            <c:if test="${pageContext.request.userPrincipal.authenticated}">
+                                <li><a href='/logout'>Đăng xuất</a></li>
+                                <li><a href='/admin/edit'>Quản lý bài viết</a></li>
+                            </c:if>
+                            <c:if test="${!pageContext.request.userPrincipal.authenticated}">
+                                <li><a href='/login'>Đăng nhập</a></li>
+                            </c:if>
+                        </ul>
+                        <div class='clear'></div>
+                    </div>
+                </div>
             </div>
+            <div class='search-box'>
+<span class='icon-search'>
+<i class='fa fa-search'></i>
+</span>
+                <form action='/' method='post'>
+                    <input name='keyword' type='search' value='Tìm kiếm hoạt động'/>
+                </form>
+            </div>
+            <div class='share-box'>
+                <a class='social-facebook' href='#' target='_blank'><i class='fa fa-facebook'></i></a>
+                <a class='social-twitter' href='#' target='_blank'><i class='fa fa-twitter'></i></a>
+                <a class='social-gplus' href='#' target='_blank'><i class='fa fa-google-plus'></i></a>
+                <a class='social-linkedin' href='#' target='_blank'><i class='fa fa-linkedin'></i></a>
+                <a class='social-pinterest' href='#' target='_blank'><i class='fa fa-pinterest'></i></a>
+                <a class='social-youtube' href='#' target='_blank'><i class='fa fa-youtube'></i></a>
+                <a class='social-vimeo' href='#' target='_blank'><i class='fa fa-vimeo-square'></i></a>
+                <a class='social-instagram' href='#' target='_blank'><i class='fa fa-instagram'></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- END / NAVIGATION -->
+    <!-- HEADER -->
+    <header class='header' id='header'>
+        <div class='container'>
+            <!-- LOGO -->
+            <div class='logo text-center'>
+                <div class='header section' id='header'>
+                    <div class='widget Header' data-version='1' id='Header1'>
+                        <div id='header-inner'>
+                            <a href='http://gridz-themexpose.blogspot.com/' style='display: block'>
+                                <img alt='GreenGarden' height='72px; ' id='Header1_headerimg'
+                                     src='/images/logo.jpg'
+                                     style='display: block' width='220px; '/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END / LOGO -->
+        </div>
+    </header>
+    <nav class='pi-navigation' data-menu-responsive='992'>
+        <div class='container'>
+            <div class='open-menu'>
+                <span class='item item-1'></span>
+                <span class='item item-2'></span>
+                <span class='item item-3'></span>
+            </div>
+            <div class='close-menu'></div>
+            <ul class='navlist'>
+                <c:forEach items="${categories}" var="category">
+                    <li>
+                        <a href="/post/category/${category.id}"> ${category.name}</a>
+                    </li>
+                </c:forEach>
+            </ul>
+        </div>
+    </nav>
+    <!-- END / HEADER -->
+    <!-- FEATURED -->
+    <div class='featured' id='featured'>
+        <script type='text/javascript'>
+            var numposts = 6;
+            var outerclass = "featured-slider";
+            var starttag = "";
+            var endtag = "";
+            var intag = 'li';
+        </script>
+        <script>
+            document.write("<script src=\"/feeds/posts/default/-/featured?max-results=" + numposts + "&orderby=published&alt=json-in-script&callback=labelthumbs\"><\/script>");
+        </script>
+    </div>
+    <!-- END / FEATURED -->
+    <!-- BLOG MAIN CONTENT -->
+    <article class='blog-content blog-grid'>
+        <div class='container'>
+            <div class='row'>
+                <!-- CONTENT -->
+                <div class='col-md-9'>
+                    <div class='content'>
+                        <div class='main section' id='main'>
+                            <div class='widget Blog' data-version='1' id='Blog1'>
+                                <div class='post-wrapper'>
+                                    <c:if test="${posts==null}">
+                                        <h1 style="padding: 15px; text-align: center">${message}</h1>
+                                    </c:if>
+                                    <c:forEach items="${posts}" var="post">
+
+                                    <div class='grid-item col-md-4'>
+
+                                        <div class='post hentry' itemprop='blogPost' itemscope='itemscope'
+                                             itemtype='http://schema.org/BlogPosting'>
+                                            <div class='entry-content' id='post-body-202452633544924310'
+                                                 itemprop='description articleBody'>
+                                                <div class='post-media'>
+                                                    <div class='image-wrap'>
+                                                        <div class='mask'></div>
+                                                        <img alt='${post.create_by}'
+                                                             <c:if test="${post.imageURL!=null}">src="${post.imageURL}"</c:if>
+                                                             <c:if test="${post.imageURL==null}">src="/images/default.jpg"</c:if>/>
+                                                    </div>
+                                                </div>
+                                                <div class='post-body'>
+                                                    <div class='post-author'>
+                                                        <div class='image-thumb'>
+                                                            <img alt='Post Author'
+                                                                 <c:if test="${post.imageURL!=null}">src="${post.imageURL}"</c:if>
+                                                                    <c:if test="${post.imageURL==null}">src="/images/default.jpg"</c:if> />
+                                                        </div>
+                                                        <div class='name-author'>
+                                                            <cite>${post.create_by}</cite>
+                                                        </div>
+                                                    </div>
+                                                    <div class='post-title'>
+                                                        <h2>
+                                                            <a href='/post/${post.id}'>
+                                                                    ${post.name}</a></h2>
+                                                    </div>
+                                                    <div class='post-entry'>
+                                                        <p> </p>
+                                                    </div>
+                                                    <div class='traingle'></div>
+                                                    <div class='postfooter clearfix'>
+                                                        <a href='/post/${post.id}'>
+                                                            <div class='read'>
+                                                                Đọc bài
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div style='clear: both;'></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    </c:forEach>
+
+                                </div>
 
 
-            <c:if test="${posts==null}">
-                <h1 style="padding: 15px">${message}</h1>
-            </c:if>
-            <br><br><br>
-            <div id="grid-container" style="padding: 0 24px">
-                <c:forEach items="${posts}" var="post">
-                    <div class="cbp-item">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img style="height: 300px"
-                                         <c:if test="${post.imageURL!=null}">src="${post.imageURL}"</c:if>
-                                    <c:if test="${post.imageURL==null}"> style="height: 300px"
-                                         src="/images/default.jpg"</c:if> alt="custom alt 1" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END / CONTENT -->
+                <!-- SIDEBAR -->
+                <div class='col-md-3'>
+                    <div class='sidebar section' id='sidebar'>
+                        <div class='widget PopularPosts' data-version='1' id='PopularPosts1'>
+                            <h2>Bài viết nổi bật</h2>
+                            <div class='widget-content popular-posts'>
+                                <ul>
+                                    <c:if test="${viewTopPosts!=null}">
+                                        <c:forEach items="${viewTopPosts}" var="viewPost">
+                                            <li>
+                                                <div class='item-thumbnail-only'>
+                                                    <div class='item-thumbnail'>
+                                                        <a href='' target='_blank'>
+                                                            <img alt='' border='0'
+                                                                 <c:if test="${post.imageURL!=null}">src="${post.imageURL}"</c:if>
+                                                                    <c:if test="${post.imageURL==null}"> style="height: 300px"
+                                                                        src="/images/default.jpg"</c:if>
+                                                            />
+                                                        </a>
+                                                    </div>
+                                                    <div class='item-title'>
+                                                        <a href='/post/${viewPost.id}'>${viewPost.name}</a></div>
+                                                </div>
+                                                <div style='clear: both;'></div>
+                                            </li>
+                                        </c:forEach>
+                                    </c:if>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END / SIDEBAR -->
+                <div class='clear'></div>
+            </div>
+        </div>
+    </article>
+    <!-- BLOG MAIN CONTENT -->
+    <!-- FOOTER -->
+    <footer class='footer' id='footer'>
+        <div class='container'>
+            <div class='row'>
+                <!-- WIDGET NEWSLETTER -->
+                <div class='col-md-4'>
+                    <div class='footer-section section' id='footer1'>
+                        <div class='widget PopularPosts' data-version='1' id='PopularPosts2'>
+                            <h2>Bài viết nổi bật</h2>
+                            <div class='widget-content popular-posts'>
+                                <ul>
+                                    <c:if test="${viewTopPosts!=null}">
+                                        <c:forEach items="${viewTopPosts}" var="viewPost">
+
+                                            <li>
+                                                <div class='item-thumbnail-only'>
+                                                    <div class='item-thumbnail'>
+                                                        <a href='/post/${viewPost.id}' target='_blank'>
+                                                            <img width="72" height="72" alt='' border='0'
+                                                                 <c:if test="${post.imageURL!=null}">src="${post.imageURL}"</c:if>
+                                                                    <c:if test="${post.imageURL==null}">
+                                                                        src="/images/default.jpg"</c:if>
+                                                            />
+                                                        </a>
+                                                    </div>
+                                                    <div class='item-title'><a
+                                                            href='/post/${viewPost.id}'>${viewPost.name}</a></div>
+                                                </div>
+                                                <div style='clear: both;'></div>
+                                            </li>
+                                        </c:forEach>
+                                    </c:if>
+                                </ul>
+                                <div class='clear'></div>
+
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END / WIDGET NEWSLETTER -->
+                <!-- WIDGET META -->
+                <div class='col-md-4'>
+                    <div class='footer-section section' id='footer2'>
+                        <div class='widget Label' data-version='1' id='Label5'>
+                            <h2>Từ khóa</h2>
+                            <div class='widget-content cloud-label-widget-content'>
+<span class='label-size label-size-5'>
+<a dir='ltr' href='/'>Trẻ em</a>
+</span>
+                                <span class='label-size label-size-5'>
+<a dir='ltr' href=''>Thủ đức</a>
+</span>
+                                <span class='label-size label-size-4'>
+<a dir='ltr' href=''>Mẹ và bé</a>
+</span>
+                                </span>
+                                <div class='clear'></div>
+
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                        <div class='widget HTML' data-version='1' id='HTML5'>
+                            <div class='widget-content'>
+                                <div class="flickr_plugin">
+                                    <script src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=58782395@N03"
+                                            type="text/javascript"></script>
                                 </div>
                             </div>
-                            <%--<div class="cbp-caption-activeWrap">--%>
-                                <%--<div class="cbp-l-caption-alignCenter">--%>
-                                    <%--<div class="cbp-l-caption-body">--%>
-                                        <%--<a href="/post/${post.id}"--%>
-                                           <%--class="cbp-l-caption-buttonLeft btn red uppercase">Đọc--%>
-                                            <%--thêm</a>--%>
+                            <div class='clear'></div>
 
-                                    <%--</div>--%>
-                                <%--</div>--%>
-                            <%--</div>--%>
                         </div>
-                        <div class="cbp-l-grid-projects-desc" style="color: #35a533;font-size: 12px;
-    line-height: 20px;
-    font-weight: 500;">${post.category.name}</div>
-                        <div class="cbp-l-grid-projects-title" style="">
-                       <a href="/post/${post.id}">   <h3 class="uppercase" style="color: #35a533;font-size: 20px; margin: 0;
-    line-height: 20px;
-    font-weight: 500;">${post.name}</h3></a>
-                        </div>
-
                     </div>
-                </c:forEach>
+                </div>
+                <!-- END / WIDGET META -->
+                <!-- WIDGET TWITTER -->
+                <div class='col-md-4'>
+                    <div class='footer-section section' id='footer3'>
+                        <div class='widget BlogArchive' data-version='1' id='BlogArchive1'>
+                            <h2>Chuyên mục</h2>
+                            <div class='widget-content'>
+                                <div id='ArchiveList'>
+                                    <div id='BlogArchive1_ArchiveList'>
+                                        <ul class='flat'>
+                                            <c:forEach items="${categories}" var="category">
+                                                <li class='archivedate'>
+                                                    <a href='/post/category/${category.id}'>${category.name}</a>
+
+                                                </li>
+                                            </c:forEach>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class='clear'></div>
+                                <span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit'
+   href='//www.blogger.com/rearrange?blogID=8716316713512045313&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=footer3'
+   onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1'
+   title='Edit'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END / WIDGET TWITTER -->
+                <!-- END / WIDGET ARCHIVES -->
+                <div class='clear'></div>
             </div>
         </div>
+        <div class='copyright text-center'>
+            <div class='container'>
+                <div class='footer-left'>
+                    Copyright &#169; 2016
+                    <a href='/'>
+                        FIT HCMUTE
+                    </a>
+                </div>
+            </div>
+            <div class='totop'>
+                <div class='totop-inner'>
+                    <i class='fa fa-angle-up'></i>
+                </div>
+            </div>
         </div>
-    </div>
+    </footer>
+    <!-- END / FOOTER -->
+</div>
+<!-- END / PAGE WRAP -->
+<script type='text/javascript'>
+    //<![CDATA[
 
-</section>
+    var pageCount = 9;
+    var displayPageNum = 3;
+    var upPageWord = "<i class='fa fa-angle-left'></i>";
+    var downPageWord = "<i class='fa fa-angle-right'></i>";
 
-<%@include file="./footer.jsp" %>
-<script type="text/javascript" src="/assets/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+
+    //]]>
+</script>
+<script class='java' type='text/javascript'>
+    //<![CDATA[
+    $(document).ready(function () {
+        $('.entry-content .post-media .image-wrap img').each(function () {
+            this.src = this.src.replace('/s72-c/', '/s420-p/');
+        });
+    });
+    //]]>
+</script>
+<script class='java' type='text/javascript'>
+    //<![CDATA[
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            $(this).scrollTop() ? $(".totop").fadeIn() : $(".totop").fadeOut()
+        }), $(".totop").click(function () {
+            $("html,body").animate({
+                scrollTop: 0
+            }, 500)
+        });
+        var n = window.location.href;
+        $(".navlist li a,.navlist li ul li ul li a").filter(function () {
+            return $(this).prop("href") === n
+        }).parent("li").addClass("current-menu-parent");
+        var l = window.location.href;
+        $(".navlist li ul li a,.navlist li ul li a").filter(function () {
+            return $(this).prop("href") === l
+        }).parents("li").parents("ul").parent().addClass("current-menu-parent"), $(".navlist ul").parent().addClass("menu-item-has-children item-plus")
+    });
+    !function (e) {
+        "use strict";
+
+        function i() {
+            e(".blog-grid").length && setTimeout(function () {
+                e(".blog-grid .post-wrapper").masonry({
+                    columnWidth: ".grid-item",
+                    itemSelector: ".grid-item"
+                })
+            }, 1)
+        }
+
+        function t() {
+            var i = e('input[type="search"], input[type="text"], input[type="email"], textarea');
+            i.each(function () {
+                var i = e(this),
+                    t = i.val();
+                i.focus(function () {
+                    e(this).val() === t && e(this).val("")
+                }), i.blur(function () {
+                    "" === e(this).val() && e(this).val(t)
+                })
+            })
+        }
+
+        function a() {
+            if (e(".blog-timeline").length) {
+                var i = e(window).scrollTop(),
+                    t = e(window).height(),
+                    a = e(".blog-timeline .content").offset().top,
+                    n = i - a;
+                e(".pi-line").css({
+                    top: "0",
+                    "-webkit-transform": "translateY(" + n + "px)",
+                    "-o-transform": "translateY(" + n + "px)",
+                    "-ms-transform": "translateY(" + n + "px)",
+                    "-moz-transform": "translateY(" + n + "px)",
+                    transform: "translateY(" + n + "px)"
+                }), e(".blog-timeline .post-meta").each(function () {
+                    var a = e(this),
+                        n = a.offset().top,
+                        s = n - t / 2;
+                    i >= s ? a.addClass("metaLight") : a.removeClass("metaLight")
+                })
+            }
+        }
+
+        function n() {
+            e().tweet && e(".latest-tweets").each(function () {
+                var i = e(".latest-tweets");
+                i.tweet({
+                    username: i.data("username"),
+                    join_text: "auto",
+                    avatar_size: null,
+                    count: i.data("number"),
+                    template: "{text}",
+                    loading_text: "loading tweets...",
+                    modpath: i.data("modpath"),
+                    callback: d
+                })
+            })
+        }
+
+        function s() {
+            var i = e(".pi-navigation"),
+                t = e("#header").offset().top + e("#header").outerHeight() - 52,
+                a = e(window).scrollTop();
+            a >= t ? i.addClass("nav-fixed") : i.removeClass("nav-fixed")
+        }
+
+        var o = {
+                Android: function () {
+                    return navigator.userAgent.match(/Android/i)
+                },
+                BlackBerry: function () {
+                    return navigator.userAgent.match(/BlackBerry/i)
+                },
+                iOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i)
+                },
+                Opera: function () {
+                    return navigator.userAgent.match(/Opera Mini/i)
+                },
+                Windows: function () {
+                    return navigator.userAgent.match(/IEMobile/i)
+                },
+                any: function () {
+                    return o.Android() || o.BlackBerry() || o.iOS() || o.Opera() || o.Windows()
+                }
+            },
+            r = (window.innerWidth, e(window).height(), ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>']),
+            l = function () {
+                var i = e(".post-slider");
+                i.length > 0 && i.owlCarousel({
+                    autoPlay: !1,
+                    slideSpeed: 300,
+                    navigation: !0,
+                    pagination: !1,
+                    singleItem: !0,
+                    autoHeight: !0,
+                    navigationText: r
+                })
+            },
+            c = function () {
+                var i = e(".featured-slider");
+                i.length > 0 && i.owlCarousel({
+                    autoPlay: 2e4,
+                    slideSpeed: 300,
+                    navigation: !0,
+                    pagination: !1,
+                    items: 5,
+                    loop: true,
+                    itemsCustom: [
+                        [0, 1],
+                        [500, 2],
+                        [992, 3],
+                        [1200, 3],
+                        [1400, 4]
+                    ],
+                    navigationText: r,
+                })
+            },
+            u = {
+                obj: {
+                    subscribeEmail: e("#subscribe-email"),
+                    subscribeButton: e("#subscribe-button"),
+                    subscribeMsg: e("#subscribe-form .subscribe-status"),
+                    subscribeContent: e("#subscribe-form .form-remove"),
+                    dataMailchimp: e("#subscribe-form").attr("data-mailchimp"),
+                    success_message: "Thank you for joining our mailing list. Please check your email for a confirmation link.",
+                    failure_message: "There was a problem processing your submission.",
+                    noticeError: "{msg}",
+                    noticeInfo: "{msg}",
+                    basicAction: "mail/subscribe.php",
+                    mailChimpAction: "mail/subscribe-mailchimp.php"
+                },
+                eventLoad: function () {
+                    var i = u.obj;
+                    e(i.subscribeButton).on("click", function () {
+                        if ("" != i.subscribeEmail.val()) {
+                            if (window.ajaxCalling) return;
+                            var e = "true" === i.dataMailchimp;
+                            u.ajaxCall(e ? i.mailChimpAction : i.basicAction)
+                        } else i.subscribeMsg.html("Email is required.").fadeIn("slow");
+                        return !1
+                    })
+                },
+                ajaxCall: function (i) {
+                    window.ajaxCalling = !0;
+                    var t = u.obj,
+                        a = t.subscribeMsg.html("").hide();
+                    t.subscribeButton.val("Sending"), e.ajax({
+                        url: i,
+                        type: "POST",
+                        dataType: "json",
+                        data: {
+                            subscribeEmail: t.subscribeEmail.val()
+                        },
+                        success: function (e) {
+                            if (e.status) t.subscribeContent.fadeOut(500, function () {
+                                a.html(t.success_message).fadeIn(500)
+                            });
+                            else {
+                                switch (e.msg) {
+                                    case "email-required":
+                                        a.html(t.noticeError.replace("{msg}", "Email is required."));
+                                        break;
+                                    case "email-err":
+                                        a.html(t.noticeError.replace("{msg}", "Email invalid."));
+                                        break;
+                                    case "duplicate":
+                                        a.html(t.noticeError.replace("{msg}", "Email is duplicate."));
+                                        break;
+                                    case "filewrite":
+                                        a.html(t.noticeInfo.replace("{msg}", "Mail list file is open."));
+                                        break;
+                                    case "undefined":
+                                        a.html(t.noticeInfo.replace("{msg}", "undefined error."));
+                                        break;
+                                    case "not-support":
+                                        a.html(t.noticeInfo.replace("{msg}", "Your host do not support php mail function."));
+                                        break;
+                                    case "api-error":
+                                        t.subscribeContent.fadeOut(500, function () {
+                                            a.html(t.failure_message)
+                                        })
+                                }
+                                t.subscribeButton.val("Send"), a.fadeIn(500)
+                            }
+                        },
+                        error: function () {
+                            alert("Connection error")
+                        },
+                        complete: function () {
+                            window.ajaxCalling = !1
+                        }
+                    })
+                }
+            },
+            d = function () {
+                e(".twitter-slider").owlCarousel({
+                    autoPlay: !1,
+                    slideSpeed: 300,
+                    navigation: !0,
+                    pagination: !1,
+                    singleItem: !0,
+                    autoHeight: !0,
+                    transitionStyle: "fade",
+                    navigationText: ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>']
+                })
+            };
+        e(document).ready(function () {
+            u.eventLoad(), o.any() && e("html").addClass("ismobile"), e(document).on("click", ".share-toggle", function () {
+                var i = e(this);
+                i.toggleClass("toggle-active"), i.siblings(".share").toggleClass("share-active")
+            }), e(".search-box .icon-search").on("click", function () {
+                e(this).toggleClass("active"), e('.search-box input[type="search"]').toggleClass("fadein")
+            }), e("html").on("click", function () {
+                e(".search-box .icon-search").removeClass("active"), e('.search-box input[type="search"]').removeClass("fadein")
+            }), e(".search-box").on("click", function (e) {
+                e.stopPropagation()
+            }), e(".pi-line").height(e(window).height() / 2), e(window).scroll(function () {
+                a(), s()
+            })
+        }), e(window).on("load resize", function () {
+            var i = e(".sidebar-right"),
+                t = e(".sidebar-left");
+            i.closest(".blog-standard").find(".content").css("margin-right", "100px"), t.closest(".blog-standard").find(".content").css({
+                "margin-left": "30px",
+                "margin-right": "70px"
+            }), i.closest(".blog-grid, .blog-list, .blog-timeline").find(".content").css("margin-right", "30px"), t.closest(".blog-grid, .blog-list, .blog-timeline").find(".content").css("margin-left", "30px"), t.closest(".blog-content").find(".col-md-9").addClass("col-md-push-3"), t.closest(".blog-content").find(".col-md-3").addClass("col-md-pull-9"), e(".blog-standard .post").each(function () {
+                var i = e(this),
+                    t = i.find(".post-meta"),
+                    a = i.find(".post-title"),
+                    n = i.find(".post-media");
+                t.insertAfter(window.innerWidth < 992 ? a : n)
+            }), e(".blog-list .post").each(function () {
+                {
+                    var i = e(this),
+                        t = i.find(".post-meta"),
+                        a = i.find(".post-title"),
+                        n = i.find(".post-author");
+                    i.find(".post-media")
+                }
+                n.insertAfter(t.children().first()), t.insertAfter(a)
+            }), e(".pi-navigation").each(function () {
+                var i = e(this),
+                    t = i.find(".open-menu"),
+                    a = i.find(".close-menu"),
+                    n = i.find(".navlist"),
+                    s = i.find(".sub-menu"),
+                    o = e("#header"),
+                    r = window.innerWidth,
+                    l = e(window).height(),
+                    c = i.data("menu-responsive");
+                c > r ? (t.show(), o.addClass("header-responsive"), n.addClass("off-canvas").css("height", l - 52), n.children(".menu-item-has-children").removeClass("item-plus"), 0 === i.find(".submenu-toggle").length && (e(".menu-item-has-children, .navList > .menu-item-language-current").children("a").after('<span class="submenu-toggle"><i class="fa fa-angle-right"></i></span>'), n.on("click", ".submenu-toggle", function (i) {
+                        i.preventDefault(), e(this).siblings(".sub-menu").addClass("sub-menu-active")
+                    })), s.each(function () {
+                        var t = e(this);
+                        0 === t.find(".back-mb").length && t.prepend('<li class="back-mb"><a href="#">Back</a></li>'), i.on("click", ".back-mb a", function (i) {
+                            i.preventDefault(), e(this).parent().parent().removeClass("sub-menu-active")
+                        })
+                    }), t.on("click", function () {
+                        n.addClass("off-canvas-active"), e(this).addClass("toggle-active"), a.show()
+                    }), a.on("click", function () {
+                        n.removeClass("off-canvas-active"), t.removeClass("toggle-active"), e(".sub-menu").removeClass("sub-menu-active"), e(this).hide()
+                    }), e("html").on("click", function () {
+                        n.removeClass("off-canvas-active"), t.removeClass("toggle-active"), e(".sub-menu").removeClass("sub-menu-active"), a.hide()
+                    }), i.on("click", function (e) {
+                        e.stopPropagation()
+                    })) : (t.hide(), o.removeClass("header-responsive"), n.removeClass("off-canvas").css("height", "auto"), n.children(".menu-item-has-children").addClass("item-plus"), e(".back-mb, .submenu-toggle").remove())
+            })
+        }), e(window).load(function () {
+            e("#preloader").fadeOut(1e3), n(), i(), t(), l(), c()
+        })
+    }(jQuery);
+
+    //]]>
+</script>
+<script type='text/javascript'>
+    //<![CDATA[
+    $(document).ready(function () {
+        $(".fancybox").fancybox();
+    });
+    //]]>
+</script>
 <script>
     $(document).ready(function () {
-        $('#grid-container').cubeportfolio('init', {
-            layoutMode: 'grid',
-//           defaultFilter: '*',
-            animationType: 'quicksand',
-            gapHorizontal: 35,
-            gapVertical: 30,
-            gridAdjustment: 'responsive',
-            mediaQueries: [{
-                width: 1500,
-                cols: 5
-            }, {
-                width: 1100,
-                cols: 5
-            }, {
-                width: 800,
-                cols: 3
-            }, {
-                width: 480,
-                cols: 2
-            }, {
-                width: 320,
-                cols: 1
-            }],
-            caption: 'overlayBottomReveal',
-            displayType: 'sequentially',
-            displayTypeSpeed: 80,
-
-            // singlePage popup
-//           singlePageDelegate: '.cbp-singlePage',
-//           singlePageDeeplinking: true,
-//           singlePageStickyNavigation: true,
-//           singlePageCounter: '<div class="cbp-popup-singlePage-counter">{{current}} of {{total}}</div>'
-        });
-//       $('#grid-container1').cubeportfolio('init',{
-//           layoutMode:'slider',
-//           showNavigation:true,
-//           showPagination:true,
-//           rewindNav:true,
-//           auto:true,
-//           autoTimeout:2000
-//        });
-    })
+        $(".widget h2").wrapInner("<span></span>");
+    });
 </script>
-</body>
 
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/803954089-widgets.js"></script>
+
+</body>
+<script class='java' type='text/javascript'>
+    //<![CDATA[
+    $(window).load(function () {
+        $('.java').remove();
+    });
+    //]]>
+</script>
 </html>

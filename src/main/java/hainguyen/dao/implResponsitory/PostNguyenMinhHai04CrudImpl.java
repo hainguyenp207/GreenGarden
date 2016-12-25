@@ -1,7 +1,7 @@
 package hainguyen.dao.implResponsitory;
 
 import hainguyen.dao.entity.Post;
-import hainguyen.dao.responsitory.NguyenMinhHai_04_PostNguyenMinhHai04Crud;
+import hainguyen.dao.responsitory.NguyenMinhHai_04_PostCrud;
 import hainguyen.service.NguyenMinhHai_04_PostService;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
@@ -14,11 +14,11 @@ import java.util.List;
 
 /**
  * Created by jinz on 12/12/16.
- * Thực thi lớp NguyenMinhHai_04_PostNguyenMinhHai04Crud
+ * Thực thi lớp NguyenMinhHai_04_PostCrud
  *
  */
 @Repository("PostCrud")
-public class PostNguyenMinhHai04CrudImpl extends NguyenMinhHai_04_CrudImpl<Post> implements NguyenMinhHai_04_PostNguyenMinhHai04Crud {
+public class PostNguyenMinhHai04CrudImpl extends NguyenMinhHai_04_CrudImpl<Post> implements NguyenMinhHai_04_PostCrud {
     @Autowired
     private SessionFactory sessionFactory;
     @Autowired

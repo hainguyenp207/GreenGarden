@@ -55,10 +55,10 @@ public class NguyenMinhHai_04_PostController {
             post.setView(post.getView() + 1);
             nguyenMinhHai04PostService.update(post);
         }
-
+        List<Post> viewTopPosts = nguyenMinhHai04PostService.getTopicPagingView(6);
         model.addAttribute("posts", posts);
         model.addAttribute("categories", categories);
-
+        model.addAttribute("viewTopPosts", viewTopPosts);
         return "index";
     }
 
@@ -159,10 +159,11 @@ public class NguyenMinhHai_04_PostController {
         List<Post> newPosts = nguyenMinhHai04PostService.getTopicPagingNew(6);
         // Lấy danh sách bài viết có nhiều View Nhất
         List<Post> viewTopPosts = nguyenMinhHai04PostService.getTopicPagingView(6);
-
+        List<Category> categories = nguyenMinhHai04CategoryService.getCategories();
         model.addAttribute("newPosts", newPosts);
         model.addAttribute("viewTopPosts", viewTopPosts);
         model.addAttribute("post", currentPost);
+        model.addAttribute("categories", categories);
         return "post1";
     }
 
