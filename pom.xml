@@ -25,7 +25,7 @@
 		<hibernate.version>4.3.8.Final</hibernate.version>
 		<mysql.version>5.0.8</mysql.version>
 		<joda-time.version>2.3</joda-time.version>
-		<jackson.version>2.7.5</jackson.version>
+		<jackson.version>2.12.7.1</jackson.version>
 	</properties>
 
 	<dependencies>
